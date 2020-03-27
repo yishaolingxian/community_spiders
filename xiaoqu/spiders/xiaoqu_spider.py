@@ -139,7 +139,7 @@ class XiaoquSpiderSpider(scrapy.Spider):
 
     # 调用经高德地图API，获取经纬度与详细地址
     def location(self, detail_address):
-        url = "https://restapi.amap.com/v3/geocode/geo?address=" + detail_address + "&key=d89d964da70dc6769d257c929f82e4c0"
+        url = "https://restapi.amap.com/v3/geocode/geo?address=" + detail_address + "&key=你的key"
         response = requests.get(url).json()
         geocodes = response['geocodes']
         for geocode in geocodes:
